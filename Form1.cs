@@ -66,7 +66,12 @@ namespace Proyecto_Beca
                 string apellidoSep = nombreSeparado[0];
                 string nombreSep = nombreSeparado[1];
 
-                char.ToUpper(apellidoSep[0]) + apellidoSep.Substring(1).ToLower()+nombreSep[0] + nombreSep.Substring(1).ToLower()));
+                string ape = char.ToUpper(apellidoSep[0]) + apellidoSep.Substring(1); ;
+                string nom = char.ToUpper(nombreSep[0]) + nombreSep.Substring(1);
+
+                string ApellidoYnombre = ape + nom;
+
+                dataGridView1.Rows[i].Cells[1].Value = ApellidoYnombre;
 
                 i++;
             }
